@@ -1,6 +1,9 @@
 # Data
 data/
 
+# Output
+output/
+
 # IntelliJ IDEA
 .idea/
 
