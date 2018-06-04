@@ -1,2 +1,8 @@
+# Data
+data/
+
 # IntelliJ IDEA
 .idea/
+
+# Jupyter
+.ipynb_checkpoints/

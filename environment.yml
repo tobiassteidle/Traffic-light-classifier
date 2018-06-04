@@ -13,4 +13,5 @@ dependencies:
     - Cython
     - pip:
         - tensorflow-gpu==1.4
+        - pyyaml
 
