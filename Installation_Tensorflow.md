@@ -74,7 +74,7 @@ python object_detection/builders/model_builder_test.py
           
 Der Output sollte sein (oder Ähnlich):
 ```
-Ran 15 tests in x.xxxs
+Ran 15 tests in 0.064s
 
 OK
 ```
