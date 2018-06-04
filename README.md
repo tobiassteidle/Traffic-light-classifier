@@ -38,6 +38,8 @@ python data_conversion_bosch.py
 ```
 Die fertige TFRecord Datei findet man dann hier: ```output/training.record```
   
+An dieser Stelle noch einmal Danke an [**Anthony Sarkis**](https://medium.com/@anthony_sarkis).  
+Von ihm ist das [original Script](https://github.com/swirlingsand/deeper-traffic-lights/blob/master/data_conversion_bosch.py).
 
 
 
