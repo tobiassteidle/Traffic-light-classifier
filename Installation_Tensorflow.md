@@ -37,21 +37,22 @@ export PYTHONPATH=$PYTHONPATH:pwd:pwd/slim
 ```pwd``` ist der Absolute Pfad zum model/research Verzeichnis.  
 
 #### Installation (Tensorflow Requirements) - Teil 3
-Für den GPU Support wird CUDA 8.0 benötigt.
-[https://developer.nvidia.com/cuda-80-ga2-download-archive](https://developer.nvidia.com/cuda-80-ga2-download-archive).
+Für den GPU Support wird CUDA 9.0 benötigt.
+[https://developer.nvidia.com/cuda-90-download-archive](https://developer.nvidia.com/cuda-90-download-archive).
 
-##### Installation CUDA 8.0
+##### Installation CUDA 9.0
 ```
-sudo dpkg -i cuda-repo-ubuntu1604-8-0-local-ga2_8.0.61-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
+sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
 sudo apt-get update
 sudo apt-get install cuda
 ```
 
 ##### Installation cuDNN
 [cuDNN Download](https://developer.nvidia.com/rdp/form/cudnn-download-survey) (Account benötigt).  
-[cuDNN v6.0 Runtime Library for Ubuntu16.04 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v6/prod/8.0_20170307/Ubuntu16_04_x64/libcudnn6_6.0.20-1+cuda8.0_amd64-deb)
+[cuDNN v7.1.4 Runtime Library for Ubuntu16.04 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.1.4/prod/9.0_20180516/Ubuntu16_04-x64/libcudnn7_7.1.4.18-1_cuda9.0_amd64)
 ```
-sudo dpkg -i libcudnn6_6.0.21-1+cuda8.0_amd64.deb
+sudo dpkg -i libcudnn7_7.1.4.18-1+cuda9.0_amd64.deb
 ```
 
 #### Installation (Tensorflow Requirements) - Teil 4

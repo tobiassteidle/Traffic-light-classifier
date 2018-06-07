@@ -21,7 +21,7 @@ Es muss zusätzlich erkannt werden welche Farbe die Ampel anzeigt.
 
 Dazu ist es notwenig ein Model zu trainieren.
 
-#### 1. Trainieren des Models
+#### Trainieren des Models
 Zum trainieren werden Bilder aus dem [Bosch Small Traffic Lights Dataset](https://hci.iwr.uni-heidelberg.de/node/6132) verwendet.  
 Da die Tensorflow Object Detection API [TFRecord - Dateien](https://www.tensorflow.org/programmers_guide/datasets#consuming_tfrecord_data)
 verwendet muss das Bosch Dataset in eine *.record Datei konvertiert werden.  
@@ -56,7 +56,10 @@ pre_trained/
         ...
 ```  
  
-  
+##### Starten des Trainings
+```
+python train.py --logtostderr --train_dir=training/ --pipeline_config_path=config/ssd_mobilenet_v2_coco.config
+```
  
 
 
