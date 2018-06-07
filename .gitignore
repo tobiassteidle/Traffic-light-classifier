@@ -1,8 +1,11 @@
 # Data
-data/
+data/bosch
 
-# Output
-output/
+# TFRecord files
+*.record
+
+# Pre-trained models
+pre_trained/ssd_mobilenet_v2_coco_2018_03_29
 
 # IntelliJ IDEA
 .idea/

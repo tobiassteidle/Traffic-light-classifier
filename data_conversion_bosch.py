@@ -8,7 +8,8 @@ from object_detection.utils import dataset_util
 
 
 flags = tf.app.flags
-flags.DEFINE_string('output_path', 'output/training.record', 'Path to output TFRecord')
+flags.DEFINE_string('output_path_training', 'tf_record/training.record', 'Path to output TFRecord for Training')
+flags.DEFINE_string('output_path_test', 'tf_record/test.record', 'Path to output TFRecord for Test')
 FLAGS = flags.FLAGS
 
 LABEL_DICT =  {
@@ -79,21 +80,16 @@ def create_tf_example(example):
 
     return tf_example
 
+def create_tf_records(input_yaml, output_path):
+    writer = tf.python_io.TFRecordWriter(output_path)
 
-def main(_):
+    examples = yaml.load(open(input_yaml, 'rb').read())
 
-    writer = tf.python_io.TFRecordWriter(FLAGS.output_path)
-
-    # BOSCH
-    INPUT_YAML = "data/bosch/dataset_train_rgb/train.yaml"
-    examples = yaml.load(open(INPUT_YAML, 'rb').read())
-
-    #examples = examples[:10]  # for testing
     len_examples = len(examples)
     print("Loaded ", len(examples), "examples")
 
     for i in range(len(examples)):
-        examples[i]['path'] = os.path.abspath(os.path.join(os.path.dirname(INPUT_YAML), examples[i]['path']))
+        examples[i]['path'] = os.path.abspath(os.path.join(os.path.dirname(input_yaml), examples[i]['path']))
 
     counter = 0
     for example in examples:
@@ -106,7 +102,9 @@ def main(_):
 
     writer.close()
 
-
+def main(_):
+    create_tf_records("data/bosch/dataset_train_rgb/train.yaml", FLAGS.output_path_training)
+    create_tf_records("data/bosch/dataset_test_rgb/test.yaml", FLAGS.output_path_test)
 
 if __name__ == '__main__':
     tf.app.run()
