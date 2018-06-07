@@ -56,7 +56,12 @@ sudo dpkg -i libcudnn7_7.1.4.18-1+cuda9.0_amd64.deb
 ```
 
 #### Installation (Tensorflow Requirements) - Teil 4
-Erstellen des Conda environments mit der environment.yml aus diesem Repository
+Erstellen des Conda environments mit der environment.yml aus diesem Repository.
+
+##### Achtung
+Tensorflow wird hier mit CPU nicht GPU Support installiert, da ich den GPU Support unter
+Windows 10 mit Ubuntu Bash nicht zum laufen bekommen habe.
+
 ```
 cd Traffic-light-classifier
 conda env create -f environment.yml
