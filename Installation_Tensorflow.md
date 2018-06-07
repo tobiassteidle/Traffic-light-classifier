@@ -50,7 +50,7 @@ sudo apt-get install cuda
 
 ##### Installation cuDNN
 [cuDNN Download](https://developer.nvidia.com/rdp/form/cudnn-download-survey) (Account benötigt).  
-[cuDNN v7.1.4 Runtime Library for Ubuntu16.04 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.1.4/prod/9.0_20180516/Ubuntu16_04-x64/libcudnn7_7.1.4.18-1_cuda9.0_amd64)
+[cuDNN v7.0.5 Runtime Library for Ubuntu16.04 (Deb)](https://developer.nvidia.com/compute/machine-learning/cudnn/secure/v7.0.5/prod/9.0_20171129/Ubuntu16_04-x64/libcudnn7_7.0.5.15-1+cuda9.0_amd64)
 ```
 sudo dpkg -i libcudnn7_7.1.4.18-1+cuda9.0_amd64.deb
 ```
