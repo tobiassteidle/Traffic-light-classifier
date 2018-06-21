@@ -1,11 +1,11 @@
 # Traffic-light-classifier
-Detection and Classifier for Udacity CarND Capstone (System Integration) Project (WIP)
+Detection and Classifier for (Udacity CarND Capstone (System Integration) Project)[https://github.com/tobiassteidle/CarND-Capstone].
 
 Um das Model für den Traffic light classifier (oder ein anderes Projekt) zu trainieren
 wird die [Tensorflow Object Detection API](https://github.com/tensorflow/models/tree/master/research/object_detection)
 benötigt.
 
-Eine Installationsanleitung unter Ubuntu 16.04 bzw. Windows mit Ubuntu Bash gibt er [hier](Installation_Tensorflow.md).
+Eine Installationsanleitung gibt es [hier](Installation_Tensorflow.md).
 
 ### Informationen
 Das erkennen von Ampeln funktioniert mit einem Vortrainiertem Model (z.B. ssd_mobilenet_v1_coco_2017_11_17)
