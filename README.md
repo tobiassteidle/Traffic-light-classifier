@@ -26,7 +26,6 @@ Ein vollständig trainiertes Model ist im Ordner ```training/``` abgelegt.
 ##### Trainieren (optional)
 Eine Beschreibung zum trainieren der Models findet man [hier](Training.md)
 
-##### Evaluierung des Models (Tensorboard)
 
 
 
