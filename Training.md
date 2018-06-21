@@ -23,7 +23,7 @@ Von ihm ist das [original Script](https://github.com/swirlingsand/deeper-traffic
 Herunterladen des Pre-Trained models z.B.  [ssd_mobilenet_v2_coco](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz) aus dem [Tensorflow detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md).  
 und extrahieren in das Verzeichnis ```/pre_trained```.
 
-Die Verzeichnisstruktur sollte so aussehen:
+Die Verzeichnisstruktur sollte so aussehen (je nachdem welches Model man geladen hat):
 ```
 pre_trained/
     ssd_mobilenet_v2_coco_2018_03_29/
@@ -60,7 +60,7 @@ Nach Abschluss des Trainings ist das gesamte Model im Ordner ```training/``` zu 
 
 #### Graph Transformieren
 Achtung: Hierfür ist wird [Tensorflow](https://github.com/tensorflow/tensorflow) benötigt.  
-Die Installationsanleitung findet man hier: [Tensorflow](https://www.tensorflow.org/install/install_sources)   
+Die Installationsanleitung findet man hier: [Tensorflow install from Source](https://www.tensorflow.org/install/install_sources)   
 ```
 bazel-bin/tensorflow/tools/graph_transforms/transform_graph \
 --in_graph=frozen_inference_graph.pb \
