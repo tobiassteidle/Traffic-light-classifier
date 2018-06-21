@@ -24,7 +24,7 @@ Dazu ist es notwenig ein Model zu trainieren.
 Ein vollständig trainiertes Model ist im Ordner ```training/``` abgelegt.
 
 ##### Trainieren (optional)
-Eine Beschreibung zum trainieren der Models findet man [hier](Training.md)
+Eine Beschreibung zum trainieren der Models findet man [hier](Training.md).
 
 
 
