@@ -1,3 +1,17 @@
+## Achtung:
+Bei der Installation sind für die Versionen einige besonderheiten zu beachten.
+
+Das das Projekt beinhaltet z.T. die Vorarbeit für das [CarND Captone bzw. System Integration](https://github.com/tobiassteidle/CarND-Capstone) Repository.
+CARLA bzw. die ROS Umgebung auf der Virtual Box arbeitet mit **Tensorflow 1.3**.
+
+D.h. sowohl für die Tensorflow Object Detection API ist umbedingt der _**Branch "r1.5"**_ zu verwenden. Die aktuelle Version ist nicht mehr zu TF1.3 kompatibel.  
+Bitte darauf achten das auch die CUDA bzw. cuDNN Versionen zu Tensorflow 1.3 passsen.  
+Andernfalls ist kein Trainieren mit GPU-Support möglich.
+
+In meiner **environment.yml** verwende ich Tensorflow 1.4, da ich mit TF 1.3 auf meinem Rechner Probleme hatte und nicht trainieren konnte.  
+Die erzeugten Modelle/Graphen sind (so wie es bei mir aussieht) kompatibel zu Tensorflow 1.3 und können somit auch verwendet werden.
+  
+
 # Installation Tensorflow Object Detection API
 
 Informationen zur Tensorflow Object Detection API [hier](https://github.com/tensorflow/models/tree/master/research/object_detection).
@@ -37,13 +51,13 @@ export PYTHONPATH=$PYTHONPATH:pwd:pwd/slim
 ```pwd``` ist der Absolute Pfad zum model/research Verzeichnis.  
 
 #### Installation (Tensorflow Requirements) - Teil 3
-Für den GPU Support wird CUDA 9.0 benötigt.
-[https://developer.nvidia.com/cuda-90-download-archive](https://developer.nvidia.com/cuda-90-download-archive).
+Für den GPU Support wird CUDA 8.0 benötigt.
+[https://developer.nvidia.com/cuda-80-download-archive](https://developer.nvidia.com/cuda-90-download-archive).
 
-##### Installation CUDA 9.0
+##### Installation CUDA 8.0
 ```
-sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb
-sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub
+sudo dpkg -i cuda-repo-ubuntu1604-9-0-local_9.0.176-1_amd64.deb # ACHTUNG:Hier CUDA 8.0 verwenden
+sudo apt-key add /var/cuda-repo-9-0-local/7fa2af80.pub # ACHTUNG:Hier CUDA 8.0 verwenden
 sudo apt-get update
 sudo apt-get install cuda
 ```
